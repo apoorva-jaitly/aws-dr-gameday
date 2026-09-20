@@ -1,0 +1,32 @@
+# Terraform working data and state
+**/.terraform/*
+terraform/modules/**/.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+# Local variable and override files (may contain sensitive values)
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+!*.tfvars.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# IDE and operating system
+.DS_Store
+.idea/
+.vscode/
+
+# Local environment files
+.env
+.env.*
+!.env.example

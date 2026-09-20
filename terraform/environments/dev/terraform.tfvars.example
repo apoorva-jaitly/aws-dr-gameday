@@ -1,0 +1,23 @@
+# Copy this file to terraform.tfvars only when overriding the cost-conscious
+# development defaults. Never place credentials or secrets here.
+
+project_name = "aws-dr-gameday"
+environment  = "dev"
+
+primary_region = "us-east-1"
+dr_region      = "us-west-2"
+
+primary_vpc_cidr = "10.10.0.0/16"
+dr_vpc_cidr      = "10.20.0.0/16"
+
+primary_availability_zones = ["us-east-1a", "us-east-1b"]
+dr_availability_zones      = ["us-west-2a", "us-west-2b"]
+
+primary_public_subnet_cidrs  = ["10.10.0.0/24", "10.10.1.0/24"]
+primary_private_subnet_cidrs = ["10.10.10.0/24", "10.10.11.0/24"]
+dr_public_subnet_cidrs       = ["10.20.0.0/24", "10.20.1.0/24"]
+dr_private_subnet_cidrs      = ["10.20.10.0/24", "10.20.11.0/24"]
+
+additional_tags = {
+  Owner = "replace-with-your-team-or-name"
+}
